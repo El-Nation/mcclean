@@ -1,85 +1,81 @@
-# McClean Elite Servicing — Website Installation Guide
+# 🧺 McClean — Premium Laundry & Garment Care Platform
 
-## Requirements
-- PHP 7.4+ or PHP 8+
-- MySQL 5.7+ / MariaDB
-- Apache or Nginx web server (XAMPP / WAMP / cPanel / VPS)
+McClean Elite Servicing is a professional laundry and garment care service platform based in Benin City. It allows customers to schedule pickups, select services and get their clothes delivered fresh and clean.
+
+🔗 **Live Demo:** [mcclean.eghedev.com](https://mcclean.eghedev.com)
 
 ---
 
-## Quick Setup Steps
+## 🚀 Features
 
-### 1. Upload Files
-Upload the entire `mcclean-elite/` folder to your web server's public root (e.g. `public_html/`, `www/`, or `htdocs/`).
+- 📅 **Online Pickup Booking** — Schedule laundry pickup from your doorstep
+- 🧼 **Multiple Services** — Wash & Fold, Dry Cleaning, Ironing, Stain Treatment, Bedding & Curtains
+- 🚚 **Pickup & Delivery** — Convenient doorstep collection and return
+- ⏱️ **Preferred Time Slots** — Choose your pickup time window
+- 💬 **WhatsApp Integration** — Direct chat with the service team
+- 📞 **Contact Form** — Send inquiries directly from the website
+- ⭐ **Customer Reviews** — Testimonials from satisfied clients
+- 📱 **Fully Responsive** — Optimized for mobile and desktop
 
-### 2. Create the Database
-- Log in to **phpMyAdmin** (or your MySQL client)
-- Create a new database named: `mcclean`
-- Import the file: `php/database.sql`
-  - This creates all tables and inserts sample testimonials automatically
+---
 
-### 3. Configure Database Connection
-Open `php/db.php` and update these values:
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | HTML5, CSS3, JavaScript |
+| Backend | PHP |
+| Database | MySQL |
+| Server | Apache (XAMPP) |
+
+---
+
+## 🗄️ Database Setup
+
+1. Import `mcclean.sql` into your MySQL database via phpMyAdmin
+2. Update your DB credentials in `php/config.php`
 
 ```php
-define('DB_HOST', 'localhost');      // Usually localhost
-define('DB_USER', 'root');          // Your MySQL username
-define('DB_PASS', '');              // Your MySQL password
-define('DB_NAME', 'mcclean'); // Database name
-```
-
-### 4. Visit Your Website
-Open your browser and go to your domain or `http://localhost/mcclean-elite/`
-
----
-
-## File Structure
-
-```
-mcclean-elite/
-├── index.php              ← Main website file
-├── css/
-│   └── style.css          ← All styling (White + Navy Blue theme)
-├── js/
-│   └── main.js            ← Interactive features & form handling
-├── php/
-│   ├── db.php             ← Database connection config
-│   ├── database.sql       ← Database setup (run this first)
-│   ├── contact_handler.php  ← Contact form processor
-│   ├── booking_handler.php  ← Booking/pickup form processor
-│   └── get_testimonials.php ← Fetch testimonials from DB
-└── images/
-    └── (add your images here)
+$host = 'localhost';
+$dbname = 'mcclean';
+$username = 'root';
+$password = '';
 ```
 
 ---
 
-## Contact & Booking Forms
-- All form submissions are saved to the **MySQL database**
-- Email notifications are sent to: **smaxtech18@gmail.com**
-- Ensure your server has PHP `mail()` configured, or integrate an SMTP service like Gmail/Mailgun
+## ⚙️ Installation
 
----
+```bash
+# Clone the repository
+git clone https://github.com/El-Nation/mcclean.git
 
-## Customization
+# Move to your htdocs folder
+cp -r mcclean /xampp/htdocs/
 
-### Update Business Info
-In `index.php`, search for and replace:
-- `07066784058` → your phone number
-- `smaxtech18@gmail.com` → your email
-- `Benin City, Edo State` → your address
+# Import the database
+# Open phpMyAdmin → Create DB → Import mcclean.sql
 
-### Update Prices
-Search for `₦` in `index.php` to find and update all price values.
-
-### Add Real Images
-Replace the placeholder colored divs in the Hero and About sections with:
-```html
-<img src="images/your-image.jpg" alt="Description" />
+# Visit in browser
+http://localhost/mcclean
 ```
 
 ---
 
-## Support
-For technical assistance, contact: smaxtech18@gmail.com
-Phone: 07066784058 | Mon–Sat 8AM–6PM
+## 📍 Business Info
+
+- 📍 166 New Lagos Rd, opp. Zenith Bank, Uselu, Benin City
+- 📞 07066784058
+- 💬 [WhatsApp](https://wa.me/2347066784058)
+
+---
+
+## 📸 Screenshots
+
+> Homepage with service offerings, booking form and customer testimonials.
+
+---
+
+## 👨‍💻 Developer
+
+Built by **El-Nation** — [github.com/El-Nation](https://github.com/El-Nation)
