@@ -55,7 +55,7 @@
     </div><!-- /footer-grid -->
 
     <div class="footer-bottom">
-      <span>© 2026 Your Laundry Brand. All Rights Reserved.</span>
+      <span>© 2026 McClean Elite Servicing. All Rights Reserved.</span>
     </div>
   </div>
 </footer>
